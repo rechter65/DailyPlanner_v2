@@ -1,0 +1,14 @@
+{
+"id": 1,
+"date_start": ”1613224800”,
+"date_finish": ”1613228400”,
+"name":"врач",
+"description": "Сдача крови"
+},
+{
+"id": 2,
+"date_start": "1593511200",
+"date_finish": "1593514800",
+"name":"встреча",
+"description": "Встреча"
+}

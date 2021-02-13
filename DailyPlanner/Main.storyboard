@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date Planner View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DatePlannerViewController" customModule="DailyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-Cd-xnS">
+                                <rect key="frame" x="0.0" y="174" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6eK-tv-q61"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="641-fk-tGs"/>
+                                </connections>
+                            </tableView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="ENC-ue-ckL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="rKJ-OR-zhn"/>
+                                </constraints>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57D-hG-aC5">
+                                <rect key="frame" x="176" y="144" width="62" height="30"/>
+                                <state key="normal" title="Выбрать"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="g5a-Cd-xnS" firstAttribute="top" secondItem="57D-hG-aC5" secondAttribute="bottom" id="8Ej-hH-Aav"/>
+                            <constraint firstItem="ENC-ue-ckL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JJt-68-t8s"/>
+                            <constraint firstItem="ENC-ue-ckL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RMl-gW-ydy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g5a-Cd-xnS" secondAttribute="bottom" id="YNu-wF-vIl"/>
+                            <constraint firstItem="g5a-Cd-xnS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dfl-l0-tzz"/>
+                            <constraint firstItem="57D-hG-aC5" firstAttribute="top" secondItem="ENC-ue-ckL" secondAttribute="bottom" id="ejo-dy-W9j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g5a-Cd-xnS" secondAttribute="trailing" id="oOU-42-td6"/>
+                            <constraint firstItem="57D-hG-aC5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qrw-5y-8dN"/>
+                            <constraint firstItem="ENC-ue-ckL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uIE-d6-mVU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="g5a-Cd-xnS" id="uW6-zn-dst"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="31"/>
+        </scene>
+    </scenes>
+</document>

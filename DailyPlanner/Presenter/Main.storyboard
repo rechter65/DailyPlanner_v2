@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date View Controller-->
+        <scene sceneID="aaV-sd-T9S">
+            <objects>
+                <viewController id="3hh-zh-ttL" customClass="DateViewController" customModule="DailyPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tcd-zb-Ydd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SI2-2A-s2y">
+                                <rect key="frame" x="20" y="211" width="362" height="650"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <viewLayoutGuide key="safeArea" id="LCX-pb-cpC"/>
+                            </tableView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="3E2-ZJ-w44">
+                                <rect key="frame" x="0.0" y="42" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="g5a-B5-6ba"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="ru_RU"/>
+                                <connections>
+                                    <action selector="didSelectDate:" destination="3hh-zh-ttL" eventType="valueChanged" id="7pW-b2-oDj"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SI2-2A-s2y" firstAttribute="top" secondItem="3E2-ZJ-w44" secondAttribute="bottom" constant="7" id="23s-3g-KPn"/>
+                            <constraint firstItem="3E2-ZJ-w44" firstAttribute="centerX" secondItem="7gJ-OD-7OA" secondAttribute="centerX" id="8fd-SK-8Dl"/>
+                            <constraint firstItem="3E2-ZJ-w44" firstAttribute="leading" secondItem="7gJ-OD-7OA" secondAttribute="leading" id="95i-AX-5uU"/>
+                            <constraint firstItem="7gJ-OD-7OA" firstAttribute="bottom" secondItem="SI2-2A-s2y" secondAttribute="bottom" constant="1" id="HEC-X3-58z"/>
+                            <constraint firstItem="3E2-ZJ-w44" firstAttribute="top" secondItem="Tcd-zb-Ydd" secondAttribute="topMargin" constant="-2" id="TKP-4Z-zy7"/>
+                            <constraint firstItem="7gJ-OD-7OA" firstAttribute="trailing" secondItem="SI2-2A-s2y" secondAttribute="trailing" constant="32" id="aww-um-fau"/>
+                            <constraint firstItem="SI2-2A-s2y" firstAttribute="leading" secondItem="7gJ-OD-7OA" secondAttribute="leading" constant="20" id="fcU-3T-UyC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7gJ-OD-7OA"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="3E2-ZJ-w44" id="ekr-2I-90u"/>
+                        <outlet property="tableView" destination="SI2-2A-s2y" id="tb7-oe-BdO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xty-F4-FbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+</document>
